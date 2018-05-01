@@ -1,0 +1,48 @@
+{
+  "name": "youtube-queue",
+  "version": "1.0.0",
+  "description": "A website for enqueuing youtube videos to play in a row",
+  "main": "index.js",
+  "scripts": {
+    "debug": "nodemon src/app.js --exec \"node --inspect -r babel-register\"",
+    "start": "nodemon src/app.js --exec \"node -r babel-register\"",
+    "clean": "rimraf dist",
+    "build": "npm run clean && mkdirp dist && babel src --ignore test.js -D -d dist",
+    "test": "npm run lint && jest",
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
+    "test:watch": "jest --watch",
+    "lint": "eslint src",
+    "lint:watch": "esw -w src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avens19/youtube-queue.git"
+  },
+  "author": "Andrew Ovens",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avens19/youtube-queue/issues"
+  },
+  "homepage": "https://github.com/avens19/youtube-queue#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.19.1",
+    "eslint-config-strict": "^14.0.1",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "eslint-watch": "^3.1.4",
+    "jest": "^22.4.3",
+    "mkdirp": "^0.5.1",
+    "nodemon": "^1.17.3",
+    "rimraf": "^2.6.2"
+  }
+}

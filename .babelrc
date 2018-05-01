@@ -1,0 +1,14 @@
+{
+  "env": {
+    "test": {
+      "retainLines": true
+    }
+  },
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "8.10"
+      }
+    }]
+  ]
+}
